@@ -2,14 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column; /* stack elements vertically */
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px; /* space between elements */
+        padding: 20px;
+      }
+
+      .capitals {
+        padding: 40px;
+        width: 250px;
+        background-color: rgb(193, 142, 195);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .one,
+      .two,
+      .three,
+      .four {
+        color: white;
+        padding: 20px;
+        width: 100%; /* fill the container width */
+        box-sizing: border-box;
+      }
+
+      .one {
+        background-color: red;
+      }
+
+      .two {
+        background-color: green;
+      }
+
+      .three {
+        background-color: blue;
+      }
+
+      .four {
+        background-color: brown;
+      }
+
+      .capital1,
+      .capital2,
+      .capital3,
+      .capital4 {
+        font-size: 30px;
+        margin-top: 10px;
+      }
+
+      .capital1 {
+        background-color: blue;
+        width: 100px;
+      }
+
+      .capital2 {
+        background-color: palevioletred;
+        width: 80px;
+      }
+
+      .capital3 {
+        background-color: red;
+        width: 70px;
+      }
+
+      .capital4 {
+        background-color: grey;
+        width: 110px;
+      }
+      #image1 {
+        width: 200px;
+      }
+    </style>
   </head>
   <body>
-    Mobile App Programming
+    <input type="text" id="cityInput" placeholder="Enter a city name" />
+    <button onclick="showCityImage()">Show Image</button>
+    <img id="showCityImage" src="/images/nature.jpg" alt="City" width="300" />
+    <div class="capitals">
+      <div class="one">
+        <button onclick="backgroundChange()">Change background colour</button>
+        <div class="capital1">London</div>
+        <div class="country1"><h1>United Kingdom</h1></div>
+      </div>
+      <div class="two">
+        <img id="image1" src="/images/rome-1.jpg" alt="Italy" /><br />
+        <button onclick="imageChange()">Change Image</button>
+        <div class="capital2">Rome</div>
+        <div class="country2"><h1>Italy</h1></div>
+      </div>
+      <div class="three">
+        <p id="add"></p>
+        <button onclick="addition()">Addition</button>
+        <div class="capital3">Paris</div>
+        <p id="subtract"></p>
+        <button onclick="subtraction()">Subtract</button>
+        <div class="country3"><h1>France</h1></div>
+      </div>
+      <div class="four">
+        <p id="multiply"></p>
+        <button onclick="multiplication()">Multiply</button>
+        <div class="capital4">Brussels</div>
+        <p id="divide"></p>
+        <button onclick="division()">Division</button>
+        <div class="country4"><h1>Belgium</h1></div>
+      </div>
+    </div>
   </body>
+  <script src="./myScript.js"></script>
 </html>
