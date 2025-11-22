@@ -1,8 +1,8 @@
 import React from "react";
-import LoginCard from "./LoginCard";
+import CounterScreen from "./CounterScreen";
 
 const App = () => {
-  return <LoginCard />;
+  return <CounterScreen />;
 };
 
 export default App;
